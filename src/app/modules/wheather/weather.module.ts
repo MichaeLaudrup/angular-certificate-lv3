@@ -10,6 +10,7 @@ import { CurrentConditionCardComponent } from "./components/current-condition-ca
 import { LocationService } from "./services/location.service";
 import { WeatherService } from "./services/weather.service";
 import { CacheService } from "app/core/services/cache.service";
+import { IconNameFromWeatherPipe } from "app/shared/pipes/icon-name-from-weather.pipe";
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { CacheService } from "app/core/services/cache.service";
         CommonModule,
         WeatherRoutingModule,
         TabsNavigatorComponent,
-        CurrentConditionCardComponent
+        CurrentConditionCardComponent,
+        IconNameFromWeatherPipe
     ],
     providers: [
         LocationService, WeatherService, CacheService
