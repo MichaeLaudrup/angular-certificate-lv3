@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1701874760272,
+  "timestamp": 1701875150122,
   "index": "https://michaelaudrup.github.io/angular-certificate-lv3/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "https://michaelaudrup.github.io/angular-certificate-lv3/836.ed4729aa1cfce88d.js",
         "https://michaelaudrup.github.io/angular-certificate-lv3/favicon.ico",
         "https://michaelaudrup.github.io/angular-certificate-lv3/index.html",
-        "https://michaelaudrup.github.io/angular-certificate-lv3/main.ca7ba4c8cc82520d.js",
+        "https://michaelaudrup.github.io/angular-certificate-lv3/main.44aef0c94bf6cae0.js",
         "https://michaelaudrup.github.io/angular-certificate-lv3/polyfills.1aa18cd3903be6e2.js",
         "https://michaelaudrup.github.io/angular-certificate-lv3/runtime.d806cf9e183a01e3.js",
         "https://michaelaudrup.github.io/angular-certificate-lv3/styles.9f968491d6baf995.css"
@@ -68,8 +68,8 @@
     "https://michaelaudrup.github.io/angular-certificate-lv3/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://michaelaudrup.github.io/angular-certificate-lv3/assets/weather.json": "66917a0e0b291aa6498489fc9820dfaa3529ceb9",
     "https://michaelaudrup.github.io/angular-certificate-lv3/favicon.ico": "c19d4c7430cdb97eaeb11f0549ab017c848be17b",
-    "https://michaelaudrup.github.io/angular-certificate-lv3/index.html": "ea0b62f76ae5e58d5fda8201e15dad0891154b75",
-    "https://michaelaudrup.github.io/angular-certificate-lv3/main.ca7ba4c8cc82520d.js": "7f6ec1425fe6301a17231b3500c0d187cf282adb",
+    "https://michaelaudrup.github.io/angular-certificate-lv3/index.html": "1db471df8b240a83560f5f79c33dd7ecd1823c5e",
+    "https://michaelaudrup.github.io/angular-certificate-lv3/main.44aef0c94bf6cae0.js": "feafb306699079217c30b12c82042deb4694594d",
     "https://michaelaudrup.github.io/angular-certificate-lv3/polyfills.1aa18cd3903be6e2.js": "3f1f560223639acff1549d399e1c3f07373da5ba",
     "https://michaelaudrup.github.io/angular-certificate-lv3/runtime.d806cf9e183a01e3.js": "fce7c88d9c8b3e98ba71fa8e9a3d86431f276c94",
     "https://michaelaudrup.github.io/angular-certificate-lv3/styles.9f968491d6baf995.css": "28dbc9a32b10006718f9499ec2b54f2f9b42315f"
