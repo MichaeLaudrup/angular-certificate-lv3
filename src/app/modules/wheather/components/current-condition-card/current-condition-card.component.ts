@@ -2,15 +2,16 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ConditionsAndZip } from 'app/modules/wheather/models/conditions-and-zip.type';
-import { LocationService } from 'app/modules/wheather/services/location.service';
 import { WeatherService } from 'app/modules/wheather/services/weather.service';
+import { IconNameFromWeatherPipe } from 'app/shared/pipes/icon-name-from-weather.pipe';
 
 @Component({
     selector: 'app-current-condition-card',
     standalone: true,
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        IconNameFromWeatherPipe
     ],
     templateUrl: 'current-condition-card.component.html',
     styleUrls: ['./current-condition-card.component.css'],
@@ -18,6 +19,5 @@ import { WeatherService } from 'app/modules/wheather/services/weather.service';
 })
 export class CurrentConditionCardComponent {
     @Input() location: ConditionsAndZip;
-    protected locationService = inject(LocationService);
     protected weatherService = inject(WeatherService);
  }

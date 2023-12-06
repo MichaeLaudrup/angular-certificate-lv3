@@ -16,7 +16,7 @@ import { CacheService } from "app/core/services/cache.service";
         ZipcodeEntryComponent,
         ForecastsListComponent,
         CurrentConditionsComponent,
-        MainPageComponent,
+        MainPageComponent
     ],
     imports: [
         CommonModule,

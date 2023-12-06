@@ -1,29 +1,32 @@
 <h1>Assignment Justifications</h1>
 <h2>General Considerations</h2>
 <ul>
-    <li>Key configuration details, such as API URLs, have been moved to the environment settings. This approach avoids hardcoding values directly in the service, enhancing security and maintainability.</li>
-    <li>The cache system's duration can be adjusted in the environment variables, allowing for flexible cache control and easier testing.</li>
-    <li>The application has been restructured into modules. Currently, it features only one module, but this design optimizes for future extensibility and maintainability. Additionally, the routing system has been enhanced to load the weather module only on demand. This approach, known as lazy loading, ensures that the module is loaded only when it is needed, thereby improving the initial load time and overall performance of the application. Also, now we have a more clean App module with less importantios.</li>
-    <li>Lazy-loading has been implemented to prepare for potential future application growth, ensuring efficient loading and performance.</li>
+    <li>A notification system has been implemented to alert users of errors (such as attempts to insert duplicates or input an invalid zip code) and to notify when the cache system is updated.</li>
+    <li>Key configuration details, like API URLs, have been moved to environment settings. This strategy avoids hardcoding these values within the service, enhancing both security and maintainability.</li>
+    <li>The cache system's duration is now configurable via environment variables, offering flexibility in cache control and simplifying testing processes.</li>
+    <li>The application has undergone a restructuring into modules. Presently, it includes one module, but this design is optimized for future expansion and easier maintenance. The routing system has also been improved to load the weather module on demand (lazy loading), enhancing initial load times and overall performance. Additionally, this restructuring has resulted in a cleaner and more streamlined App module.</li>
+    <li>Lazy-loading has been introduced in anticipation of future application growth, ensuring efficient loading and optimized performance.</li>
+    <li>New components such as a header, footer, and modal notification system have been added in order to make more aesthetic presentation.</li>
 </ul>
 <h2>Step #1: Reactive Location Service</h2>
 <ul>
     <li>
-        A reactive location service has been implemented, offering potential reusability. This service allows various components and other entities to subscribe and respond to changes in user-selected locations. Although the location data source is a Subject, it is exposed as an Observable to prevent external entities from exploiting the bidirectional nature of Subjects.
+        A reactive location service is now in place, offering enhanced reusability. This service enables various components to subscribe to and react to changes in user-selected locations. While the location data source originates from a Subject, it is shared as an Observable to prevent external entities from misusing the Subject's bidirectional capabilities.
     </li>
 </ul>
 <h2>Step #2: Reusable Navigation System with Tabs</h2>
 <ul>
     <li>
-        The tab navigation component is designed for reusability in different contexts. Located in shared/components/tabs-navigator, it requires only a list of items with associated labels and links. This component displays the tab list and notifies the parent component of any interactions, allowing the parent to implement context-specific logic.
+        The tab navigation component, designed for versatility, is located in shared/components/tabs-navigator. It works by requiring a list of items with corresponding labels and links. The component not only displays these tabs but also communicates user interactions to the parent component, which then executes context-specific logic. Making it very reusable
     </li>
+    <li>A card representational component has been created, That is, it has been decoupled from the use of services and the component is limited to displaying information.</li>
 </ul>
 <h2>Step #3: Caching System</h2>
 <ul>
     <li>
-        The caching system is designed for universal use across various components or services. It is well-documented in the code for better understanding and operates independently, ensuring that it can be utilized elsewhere in the future without issues.
+        The caching system is universally applicable across different components or services. It is thoroughly documented in the code for ease of understanding and operates independently, ensuring seamless integration in future applications.
     </li>
     <li>
-        The interval for cache checks can be specified in the environment variables, providing flexibility in cache management.
+        Cache management flexibility is enhanced by allowing the specification of cache check intervals in the environment variables.
     </li>
 </ul>
