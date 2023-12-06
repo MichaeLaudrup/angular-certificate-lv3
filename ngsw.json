@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1701875150122,
+  "timestamp": 1701877305067,
   "index": "https://michaelaudrup.github.io/angular-certificate-lv3/index.html",
   "assetGroups": [
     {
@@ -11,12 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://michaelaudrup.github.io/angular-certificate-lv3/836.ed4729aa1cfce88d.js",
+        "https://michaelaudrup.github.io/angular-certificate-lv3/863.eafca9bb733388f7.js",
         "https://michaelaudrup.github.io/angular-certificate-lv3/favicon.ico",
         "https://michaelaudrup.github.io/angular-certificate-lv3/index.html",
-        "https://michaelaudrup.github.io/angular-certificate-lv3/main.44aef0c94bf6cae0.js",
+        "https://michaelaudrup.github.io/angular-certificate-lv3/main.f0f26cc2363c2727.js",
         "https://michaelaudrup.github.io/angular-certificate-lv3/polyfills.1aa18cd3903be6e2.js",
-        "https://michaelaudrup.github.io/angular-certificate-lv3/runtime.d806cf9e183a01e3.js",
+        "https://michaelaudrup.github.io/angular-certificate-lv3/runtime.553b05987f0dd106.js",
         "https://michaelaudrup.github.io/angular-certificate-lv3/styles.9f968491d6baf995.css"
       ],
       "patterns": []
@@ -57,7 +57,7 @@
     }
   ],
   "hashTable": {
-    "https://michaelaudrup.github.io/angular-certificate-lv3/836.ed4729aa1cfce88d.js": "3c189f4f2f4e0e8ffe258735324f2535956b705b",
+    "https://michaelaudrup.github.io/angular-certificate-lv3/863.eafca9bb733388f7.js": "b15c8be221388a99070b5a75e3e8b3934b99caff",
     "https://michaelaudrup.github.io/angular-certificate-lv3/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "https://michaelaudrup.github.io/angular-certificate-lv3/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "https://michaelaudrup.github.io/angular-certificate-lv3/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -68,10 +68,10 @@
     "https://michaelaudrup.github.io/angular-certificate-lv3/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://michaelaudrup.github.io/angular-certificate-lv3/assets/weather.json": "66917a0e0b291aa6498489fc9820dfaa3529ceb9",
     "https://michaelaudrup.github.io/angular-certificate-lv3/favicon.ico": "c19d4c7430cdb97eaeb11f0549ab017c848be17b",
-    "https://michaelaudrup.github.io/angular-certificate-lv3/index.html": "1db471df8b240a83560f5f79c33dd7ecd1823c5e",
-    "https://michaelaudrup.github.io/angular-certificate-lv3/main.44aef0c94bf6cae0.js": "feafb306699079217c30b12c82042deb4694594d",
+    "https://michaelaudrup.github.io/angular-certificate-lv3/index.html": "9ab310bc32adc398cc628fda58c2ab3a9557b8fc",
+    "https://michaelaudrup.github.io/angular-certificate-lv3/main.f0f26cc2363c2727.js": "c3bd43bc96ce15757e47dec8269f27b9196c4641",
     "https://michaelaudrup.github.io/angular-certificate-lv3/polyfills.1aa18cd3903be6e2.js": "3f1f560223639acff1549d399e1c3f07373da5ba",
-    "https://michaelaudrup.github.io/angular-certificate-lv3/runtime.d806cf9e183a01e3.js": "fce7c88d9c8b3e98ba71fa8e9a3d86431f276c94",
+    "https://michaelaudrup.github.io/angular-certificate-lv3/runtime.553b05987f0dd106.js": "4929d269e700651e7dcd7396ebd2c30590a1436e",
     "https://michaelaudrup.github.io/angular-certificate-lv3/styles.9f968491d6baf995.css": "28dbc9a32b10006718f9499ec2b54f2f9b42315f"
   },
   "navigationUrls": [
