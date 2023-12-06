@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  weatherAPI_URL: "http://api.openweathermap.org/data/2.5",
+  weatherAPI_URL: "https://api.openweathermap.org/data/2.5",
   appID: "5a4b2d457ecbef9eb2a71e480b947604",
   iconURL: "https://raw.githubusercontent.com/udacity/Sunshine-Version-2/sunshine_master/app/src/main/res/drawable-hdpi/",
   defaultExpiryInSeconds: 5, // The time in seconds that it will be out of date and localstorage item
