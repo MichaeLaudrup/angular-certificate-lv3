@@ -1,0 +1,17 @@
+<div>
+  <app-tabs-navigator
+    *ngIf="tabsLinksFromCurrentConditions.length > 0; else noTabsMessage"
+    [tabsNames]="tabsLinksFromCurrentConditions"
+    (tabChosen)="processTabSelection($event)"
+    (tabDeleted)="processTabDeletion($event)"
+    >
+    <app-current-condition-card
+      *ngIf="currentLocationSelected"
+      [location]="currentLocationSelected"
+    >
+    </app-current-condition-card>
+  </app-tabs-navigator>
+</div>
+<ng-template #noTabsMessage>
+  There aren't any zip codes inserted. Could you please add a new zip code? 😊
+</ng-template>

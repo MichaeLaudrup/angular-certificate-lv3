@@ -1,0 +1,25 @@
+.icon {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 20px;
+  top: -2px;
+}
+.panel, button {
+  border: none;
+  margin: 0 2rem; 
+}
+button {
+  margin-top: 1rem;
+}
+
+.panel-heading {
+  font-variant: small-caps;
+  color: var(--main-color-ligth);
+  background-color: var(--color-dark) !important;
+  border-bottom: 2px solid black; 
+}
+
+.list-group-item{
+  background-color: var(--color-dark)
+}

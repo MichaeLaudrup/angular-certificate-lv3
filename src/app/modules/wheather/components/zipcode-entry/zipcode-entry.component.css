@@ -1,0 +1,16 @@
+.well {
+    background-color: var(--color-dark);
+    border: none;
+    border-radius: 5px;
+}
+
+input {
+    background-color: var(--color-darkest);
+    border: none;
+    color: white;
+    max-width: 300px;
+}
+
+button {
+    background-color: var(--main-color);
+}

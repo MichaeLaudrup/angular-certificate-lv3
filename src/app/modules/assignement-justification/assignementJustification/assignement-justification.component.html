@@ -1,0 +1,29 @@
+<h1>Assignment Justifications</h1>
+<h2>General Considerations</h2>
+<ul>
+    <li>Key configuration details, such as API URLs, have been moved to the environment settings. This approach avoids hardcoding values directly in the service, enhancing security and maintainability.</li>
+    <li>The cache system's duration can be adjusted in the environment variables, allowing for flexible cache control and easier testing.</li>
+    <li>The application has been restructured into modules. Currently, it features only one module, but this design optimizes for future extensibility and maintainability. Additionally, the routing system has been enhanced to load the weather module only on demand. This approach, known as lazy loading, ensures that the module is loaded only when it is needed, thereby improving the initial load time and overall performance of the application. Also, now we have a more clean App module with less importantios.</li>
+    <li>Lazy-loading has been implemented to prepare for potential future application growth, ensuring efficient loading and performance.</li>
+</ul>
+<h2>Step #1: Reactive Location Service</h2>
+<ul>
+    <li>
+        A reactive location service has been implemented, offering potential reusability. This service allows various components and other entities to subscribe and respond to changes in user-selected locations. Although the location data source is a Subject, it is exposed as an Observable to prevent external entities from exploiting the bidirectional nature of Subjects.
+    </li>
+</ul>
+<h2>Step #2: Reusable Navigation System with Tabs</h2>
+<ul>
+    <li>
+        The tab navigation component is designed for reusability in different contexts. Located in shared/components/tabs-navigator, it requires only a list of items with associated labels and links. This component displays the tab list and notifies the parent component of any interactions, allowing the parent to implement context-specific logic.
+    </li>
+</ul>
+<h2>Step #3: Caching System</h2>
+<ul>
+    <li>
+        The caching system is designed for universal use across various components or services. It is well-documented in the code for better understanding and operates independently, ensuring that it can be utilized elsewhere in the future without issues.
+    </li>
+    <li>
+        The interval for cache checks can be specified in the environment variables, providing flexibility in cache management.
+    </li>
+</ul>

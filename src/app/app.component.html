@@ -1,1 +1,4 @@
+<app-global-header></app-global-header>
 <router-outlet></router-outlet>
+<app-global-footer></app-global-footer>
+<app-notification-modal *ngIf="notification" [message]="notification.message" [kindOfNotification]="notification.type"></app-notification-modal>

@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let link of labelsAndLinks" routerLinkActive="active">
+        <a [routerLink]="link.link" >{{ link.label }}</a>
+    </li>
+</ul>

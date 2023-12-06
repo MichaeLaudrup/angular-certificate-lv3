@@ -1,0 +1,12 @@
+<ul>
+    <li 
+        *ngFor="let tab of tabsNames; let index = index"
+        [ngClass]="{'selected': index === currentSelected}"
+        >
+            <span class="tab-content" (click)="tabSelected(tab.link, index)">{{ tab.label }}</span>
+            <span class="tab-close" (click)="deleteTab(tab.link, index)">X</span>
+    </li>
+</ul>
+<div>
+    <ng-content></ng-content>
+</div>

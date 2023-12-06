@@ -1,14 +1,18 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ForecastsListComponent} from "./forecasts-list/forecasts-list.component";
-import {MainPageComponent} from "./main-page/main-page.component";
+import { AssignementJustificationComponent } from './modules/assignement-justification/assignementJustification/assignement-justification.component';
 
 const appRoutes: Routes = [
   {
-    path: '', component: MainPageComponent
+    path: 'weather-app',
+    loadChildren: () =>  import('./modules/wheather/weather.module').then((m) => m.WeatherModule),
   },
   {
-    path: 'forecast/:zipcode', component: ForecastsListComponent
+    path: 'justifications',
+    component: AssignementJustificationComponent
+  },
+  {
+    path: '**', redirectTo: 'weather-app'
   }
 ];
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes, {});

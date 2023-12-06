@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  padding: 10px;
+:root {
+  --main-color: #1864ab;
+  --main-color-ligth: #4dabf7;
+  --color-darkest: rgb(34, 34, 34);
+  --color-darker: rgb(31, 36, 45);
+  --color-dark: rgb(59, 59, 59);
+
+}
+
+
+*, *:after, *:before {
+  padding: 0;
+  margin: 0px 0px;
+  box-sizing: border-box;
+  color: white;
+}
+
+html, body {
+  font-size: 17px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
 }
