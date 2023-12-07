@@ -17,13 +17,15 @@ ul li {
   border-top-left-radius: 5px;
   color:white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 ul li.selected {
   background-color: var(--main-color-ligth);
 }
 
-.tab-content {
+.tab-label {
   display: inline-block;
   padding: .5rem 1rem;
   color:white; 
@@ -41,4 +43,9 @@ ul li.selected {
 div {
   padding: 1rem;
   border: 1px solid black;
+}
+
+.tab-content {
+  width: 100%;
+  background-color: var(--main-color-ligth);
 }

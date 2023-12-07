@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TabData } from 'app/shared/interfaces/tab-data.interface';
 
@@ -15,22 +15,20 @@ import { TabData } from 'app/shared/interfaces/tab-data.interface';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TabsNavigatorComponent {
-    @Input() tabsNames: TabData[] = [];
-    @Output() tabChosen = new EventEmitter<string>();
+    @Input() tabsData: TabData[] = [];
     @Output() tabDeleted = new EventEmitter<string>();
 
-    currentSelected = 0;
+    currentSelected : (string | number ) = 0;
 
-    tabSelected(link:string, index:number) :void {
-        this.currentSelected = index;  
-        this.tabChosen.emit(link)
-    }
-
-    deleteTab(link:string, index: number): void {
+    deleteTab(tabId:string, index: number): void {
         if(this.currentSelected === index) {
             this.currentSelected = 0;
         }
-        this.tabDeleted.emit(link);
+        this.tabDeleted.emit(tabId);
+    }
+
+    trackByFn(_: number, item: TabData): (string | number) {
+        return item.tabId; 
     }
 
 }

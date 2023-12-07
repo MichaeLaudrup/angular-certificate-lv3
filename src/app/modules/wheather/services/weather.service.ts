@@ -73,6 +73,7 @@ export class WeatherService implements OnDestroy {
         );
     }
   }
+
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
@@ -86,7 +87,7 @@ export class WeatherService implements OnDestroy {
     if (dataFromCache !== null) {
       this.currentConditions.mutate(conditions => conditions.push({zip: zipcode, data: dataFromCache}));
     } else {
-      this.http.get<CurrentConditions>(`${WeatherService.URL}/weather?zip=${zipcode},us&units=imperial&APPID=${WeatherService.APPID}`)
+      this.getCurrentConditionFromAPI(zipcode)
         .subscribe(
           data => {
             this.currentConditions.mutate(conditions => conditions.push({zip: zipcode, data}));

@@ -6,7 +6,6 @@ import { MainPageComponent } from "./pages/main-page.component";
 import { WeatherRoutingModule } from "./weather-routing.module";
 import { TabsNavigatorComponent } from "app/shared/components/tabs-navigator/tabs-navigator.component";
 import { CommonModule } from "@angular/common";
-import { CurrentConditionCardComponent } from "./components/current-condition-card/current-condition-card.component";
 import { LocationService } from "./services/location.service";
 import { WeatherService } from "./services/weather.service";
 import { CacheService } from "app/core/services/cache.service";
@@ -23,7 +22,6 @@ import { IconNameFromWeatherPipe } from "app/shared/pipes/icon-name-from-weather
         CommonModule,
         WeatherRoutingModule,
         TabsNavigatorComponent,
-        CurrentConditionCardComponent,
         IconNameFromWeatherPipe
     ],
     providers: [

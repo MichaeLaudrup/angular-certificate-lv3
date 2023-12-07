@@ -1,12 +1,16 @@
 <ul>
     <li 
-        *ngFor="let tab of tabsNames; let index = index"
+        *ngFor="let tab of tabsData; let index = index"
         [ngClass]="{'selected': index === currentSelected}"
         >
-            <span class="tab-content" (click)="tabSelected(tab.link, index)">{{ tab.label }}</span>
-            <span class="tab-close" (click)="deleteTab(tab.link, index)">X</span>
+            <span class="tab-label" (click)="currentSelected = index">{{ tab.label }}</span>
+            <span class="tab-close" (click)="deleteTab(tab.tabId, index)">X</span>
     </li>
 </ul>
-<div>
-    <ng-content></ng-content>
+<div class="tab-content">
+    <ng-container *ngFor="let tab of tabsData; let index = index;">
+        <ng-container *ngIf="currentSelected === index">
+            <ng-container [ngTemplateOutlet]="tab.template" [ngTemplateOutletContext]="tab.context"></ng-container>
+        </ng-container>
+    </ng-container>
 </div>

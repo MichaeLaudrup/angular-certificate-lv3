@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, computed, effect, inject, OnInit, Signal} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, Signal, TemplateRef, ViewChild} from '@angular/core';
 import {WeatherService} from "../../services/weather.service";
 import {LocationService} from "../../services/location.service";
 import {Router} from "@angular/router";
@@ -12,51 +12,39 @@ import { TabData } from 'app/shared/interfaces/tab-data.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
   
 })
-export class CurrentConditionsComponent implements OnInit {
-  ngOnInit(): void {
-  }
+export class CurrentConditionsComponent implements AfterViewInit {
 
   private weatherService = inject(WeatherService);
   private router = inject(Router);
   protected currentLocationSelected : ConditionsAndZip | undefined;
   protected locationService = inject(LocationService);
+
   protected currentConditionsByZip: Signal<ConditionsAndZip[]> = this.weatherService.getCurrentConditions();
-  private previouslyEmpty = true;
-  constructor() {
-    effect(() => {
-      if(this.currentConditionsByZip().length > 0) {
-        if (this.previouslyEmpty) {
-          this.currentLocationSelected = this.currentConditionsByZip()[0];
-          this.previouslyEmpty = !this.previouslyEmpty
-        }
-        
-      } else {
-        this.currentLocationSelected = undefined;
-      }
-    })
+  @ViewChild('cardTemplate') cardTemplate: TemplateRef<any>
+  
+  constructor(private cdr: ChangeDetectorRef) {
   }
+
+  ngAfterViewInit(): void {
+    this.cdr.detectChanges();
+  }
+
+  get tabsDataFromCurrentConditions(): TabData[] {
+    return this.currentConditionsByZip().map((condAndZip: ConditionsAndZip) => {
+      return {
+        label: `${condAndZip.data.name} (${condAndZip.zip})`,
+        tabId: condAndZip.zip,
+        template: this.cardTemplate,
+        context: { location: condAndZip }
+      }
+    });
+  }
+
   showForecast(zipcode : string){
     this.router.navigate(['/forecast', zipcode]);
   }
 
-  get tabsLinksFromCurrentConditions(): TabData[] {
-    return this.currentConditionsByZip().map(condAndZip => ({
-      label: `${condAndZip.data.name} (${condAndZip.zip})`,
-      link: condAndZip.zip
-    }));
-  }
-
-  processTabSelection(zipcodeSelected: string) {
-    this.currentLocationSelected = computed(() => {
-      return this.currentConditionsByZip().find(location => location.zip === zipcodeSelected)
-    })();
-  }
-
-  processTabDeletion(zipcodeToDelete: string) {
-    this.locationService.removeLocation(zipcodeToDelete);
-    if (this.currentLocationSelected.zip === zipcodeToDelete) {
-      this.currentLocationSelected = this.currentConditionsByZip()[0];
-      this.previouslyEmpty = true;
-    };
+  conditionDeleted(zip :string) {
+    this.locationService.removeLocation(zip);
   }
 }

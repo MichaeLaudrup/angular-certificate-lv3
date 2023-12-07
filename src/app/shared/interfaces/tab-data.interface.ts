@@ -1,4 +1,8 @@
+import { TemplateRef } from "@angular/core";
+
 export interface TabData {
     label: string,
-    link: string
+    tabId: string | number,
+    template: TemplateRef<any>,
+    context: { [key: string]: any; }
 }
